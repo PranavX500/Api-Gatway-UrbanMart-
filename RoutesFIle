@@ -1,0 +1,27 @@
+This routes will come in application properties
+
+spring.cloud.gateway.routes[0].id=USER-SERVICE
+spring.cloud.gateway.routes[0].uri=lb://USER-SERVICE
+spring.cloud.gateway.routes[0].predicates[0]=Path=/auth/**
+
+spring.cloud.gateway.routes[1].id=PRODUCT-SERVICE
+spring.cloud.gateway.routes[1].uri=lb://PRODUCT-SERVICE
+spring.cloud.gateway.routes[1].predicates[0]=Path=/Product/**
+
+spring.cloud.gateway.routes[2].id=OTP-SERVICE
+spring.cloud.gateway.routes[2].uri=lb://OTP-SERVICE
+spring.cloud.gateway.routes[2].predicates[0]=Path=/OTP/**
+
+spring.cloud.gateway.routes[3].id=ORDER-SERVICE
+spring.cloud.gateway.routes[3].uri=lb://ORDER-SERVICE
+spring.cloud.gateway.routes[3].predicates[0]=Path=/Order/**
+
+spring.cloud.gateway.routes[4].id=PAYMENT-SERVICE
+spring.cloud.gateway.routes[4].uri=lb://PAYMENT-SERVICE
+spring.cloud.gateway.routes[4].predicates[0]=Path=/payment/**
+
+spring.cloud.gateway.routes[5].id=CART-SERVICE
+spring.cloud.gateway.routes[5].uri=lb://CART-SERVICE
+spring.cloud.gateway.routes[5].predicates[0]=Path=/Cart/**
+
+Now this all routes will be access thorugh api-gatway 
